@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 140" role="img" aria-label="TDC monogram logo">
+  <defs>
+    <!-- Orange gradient used for the T and C strokes -->
+    <linearGradient id="tdcOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F48C06"/>
+      <stop offset="1" stop-color="#E85D04"/>
+    </linearGradient>
+  </defs>
+
+  <!--
+    TDC interlocked monogram
+    - The T's vertical stem and the D's flat back share ONE spine (truly locked).
+    - T crossbar sits on top of the shared spine (orange).
+    - D bow extends to the right of the spine (smoky gray).
+    - C is a bold arc to the right (orange), its tips tucked toward the D for a locked feel.
+  -->
+
+  <!-- Shared spine (T stem / D back) -->
+  <rect x="74" y="22" width="18" height="96" rx="4" fill="url(#tdcOrange)"/>
+
+  <!-- T crossbar (extends symmetrically across the spine) -->
+  <rect x="40" y="22" width="86" height="17" rx="4" fill="url(#tdcOrange)"/>
+
+  <!-- D bow (curves right from the spine) -->
+  <path d="M 92 22
+           Q 150 22 150 70
+           Q 150 118 92 118
+           Z" fill="#2D2D2D"/>
+
+  <!-- C arc (opens toward the D, tips tucked in) -->
+  <path d="M 240 40
+           A 44 44 0 1 0 240 100
+           L 226 89
+           A 28 28 0 1 1 226 51
+           Z" fill="url(#tdcOrange)"/>
+
+  <!-- Accent dot (the "center / point" of the brand) -->
+  <circle cx="248" cy="125" r="6" fill="#F48C06"/>
+</svg>

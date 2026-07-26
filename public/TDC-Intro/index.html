@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="مجموعه تخصصی تیمار (TIMAR DENTAL CENTER) — طراحی دیجیتال دندانی با Exocad و اجرای انواع رستوریشن‌های دندانی. آماده همکاری با لابراتوارهای مطرح کشور." />
+  <meta name="theme-color" content="#1A1A1A" />
+  <title>TIMAR DENTAL CENTER | تیمار — طراحی دیجیتال دنتال</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+
+  <!-- Fonts: Vazirmatn (Persian + Latin body) + Sora (Latin display) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Vazirmatn:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Three.js as ES module via importmap (CDN) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============== NAVBAR (Glassmorphism) ============== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <!-- Logo + wordmark -->
+      <a href="#home" class="brand" aria-label="TDC — خانه">
+        <img src="logo.svg" alt="" class="brand__mark" width="120" height="64" />
+        <span class="brand__text">
+          <span class="brand__name">TDC</span>
+          <span class="brand__sub">TIMAR DENTAL CENTER</span>
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav__links" aria-label="ناوبری اصلی">
+        <a href="#home" class="nav__link">خانه</a>
+        <a href="#about" class="nav__link">درباره ما</a>
+        <a href="#gallery" class="nav__link">نمونه‌کارهای ۳بعدی</a>
+        <a href="#lead" class="nav__link">دریافت لید</a>
+        <a href="#upload" class="nav__link">ارسال فایل</a>
+        <a href="#contact" class="nav__link">تماس</a>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav__burger" id="burger" aria-label="باز کردن منو" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="ناوبری موبایل">
+      <a href="#home" class="mobile-menu__link">خانه</a>
+      <a href="#about" class="mobile-menu__link">درباره ما</a>
+      <a href="#gallery" class="mobile-menu__link">نمونه‌کارهای ۳بعدی</a>
+      <a href="#lead" class="mobile-menu__link">دریافت لید</a>
+      <a href="#upload" class="mobile-menu__link">ارسال فایل</a>
+      <a href="#contact" class="mobile-menu__link">تماس</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ============== HERO ============== -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--orange" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--gray" aria-hidden="true"></div>
+
+      <div class="hero__content reveal">
+        <span class="hero__eyebrow">DIGITAL DENTAL DESIGN · Exocad</span>
+        <h1 class="hero__title">
+          طراحی دیجیتال در اگزوکد؛<br />
+          <span class="hero__title-accent">از ایده تا رستوریشن</span>
+        </h1>
+        <p class="hero__subtitle">
+          مجموعه تیمار با ۵ سال سابقه درخشان در حوزه طراحی دیجیتال با نرم‌افزار
+          <strong>Exocad</strong> و اجرای انواع رستوریشن‌های دندانی، آماده همکاری با
+          لابراتوارهای مطرح کشور است.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#gallery" class="btn btn--primary ripple">مشاهده نمونه‌کارها</a>
+          <a href="#contact" class="btn btn--ghost ripple">تماس با ما</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="5">۵</span>
+            <span class="hero__stat-label">سال سابقه تخصصی</span>
+          </div>
+          <span class="hero__stat-sep" aria-hidden="true"></span>
+          <div class="hero__stat">
+            <span class="hero__stat-num">Exocad</span>
+            <span class="hero__stat-label">نرم‌افزار تخصصی</span>
+          </div>
+          <span class="hero__stat-sep" aria-hidden="true"></span>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="100">۱۰۰٪</span>
+            <span class="hero__stat-label">طراحی دیجیتال</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="اسکرول به پایین">
+        <span class="hero__scroll-mouse"></span>
+        <span class="hero__scroll-text">اسکرول کنید</span>
+      </a>
+    </section>
+
+    <!-- ============== ABOUT / FOUNDERS ============== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-head__eyebrow">درباره ما</span>
+          <h2 class="section-head__title">بنیان‌گذاران مجموعه تیمار</h2>
+          <p class="section-head__desc">
+            دو متخصص جوان و خلاق که با ترکیب هنر و تکنولوژی، استانداردهای طراحی دیجیتال
+            دندانی را در مجموعه تیمار تعریف می‌کنند.
+          </p>
+        </header>
+
+        <div class="founders">
+          <article class="founder-card reveal" style="--d:.05s">
+            <div class="founder-card__photo">
+              <img src="assets/founder-kianoush.png" alt="تصویر کیانوش حیدری، بنیان‌گذار مجموعه تیمار" loading="lazy" />
+              <span class="founder-card__ring" aria-hidden="true"></span>
+            </div>
+            <h3 class="founder-card__name">کیانوش حیدری</h3>
+            <span class="founder-card__role">بنیان‌گذار · طراح دیجیتال دنتال</span>
+            <p class="founder-card__bio">
+              ۵ سال سابقه تخصصی طراحی دیجیتال با Exocad در لابراتوارهای مطرح کشور.
+            </p>
+          </article>
+
+          <article class="founder-card reveal" style="--d:.15s">
+            <div class="founder-card__photo">
+              <img src="assets/founder-soma.png" alt="تصویر سوما رحمانی، بنیان‌گذار مجموعه تیمار" loading="lazy" />
+              <span class="founder-card__ring" aria-hidden="true"></span>
+            </div>
+            <h3 class="founder-card__name">سوما رحمانی</h3>
+            <span class="founder-card__role">بنیان‌گذار · متخصص رستوریشن</span>
+            <p class="founder-card__bio">
+              ۵ سال سابقه اجرای رستوریشن‌های دندانی و کنترل کیفیت در لابراتوارهای برتر.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== 3D GALLERY ============== -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-head__eyebrow">نمونه‌کارهای ۳بعدی</span>
+          <h2 class="section-head__title">گالری تعاملی رستوریشن‌ها</h2>
+          <p class="section-head__desc">
+            روی هر نمونه‌کار کلیک کنید تا مدل سه‌بعدی آن را در نمایشگر اختصاصی بچرخانید،
+            زوم کنید و از هر زاویه‌ای بررسی کنید.
+          </p>
+        </header>
+
+        <div class="gallery__grid" id="galleryGrid">
+          <!-- Thumbnails are rendered by script.js for clean data-binding -->
+        </div>
+
+        <p class="gallery__hint reveal">
+          <span class="gallery__hint-icon" aria-hidden="true">↻</span>
+          برای تجربه کامل، روی هر کارت کلیک کنید و مدل را با موس بچرخانید.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============== LEAD FORM ============== -->
+    <section class="lead section" id="lead">
+      <div class="container container--narrow">
+        <header class="section-head reveal">
+          <span class="section-head__eyebrow">دریافت لید</span>
+          <h2 class="section-head__title">همکاری با مدیران لابراتوارها</h2>
+          <p class="section-head__desc">
+            اگر مدیر یک لابراتوار هستید، فرم زیر را تکمیل کنید تا کارشناسان ما برای ارائه
+            مشاوره و شروع همکاری با شما تماس بگیرند.
+          </p>
+        </header>
+
+        <form class="form form--lead reveal" id="leadForm" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="lf-name">نام و نام خانوادگی</label>
+              <input class="field__input" type="text" id="lf-name" name="name" placeholder="مثلاً: علی رضایی" required minlength="3" />
+              <span class="field__error" data-error-for="lf-name"></span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="lf-lab">نام لابراتوار</label>
+              <input class="field__input" type="text" id="lf-lab" name="lab" placeholder="نام لابراتوار شما" required minlength="2" />
+              <span class="field__error" data-error-for="lf-lab"></span>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="lf-mobile">شماره موبایل</label>
+              <input class="field__input" type="tel" id="lf-mobile" name="mobile" inputmode="numeric" placeholder="مثلاً: 09121234567" required pattern="^09\d{9}$" dir="ltr" />
+              <span class="field__error" data-error-for="lf-mobile"></span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="lf-city">شهر</label>
+              <input class="field__input" type="text" id="lf-city" name="city" placeholder="مثلاً: تهران" required minlength="2" />
+              <span class="field__error" data-error-for="lf-city"></span>
+            </div>
+          </div>
+
+          <fieldset class="field field--radio">
+            <legend class="field__label">موضوع همکاری</legend>
+            <div class="radio-group">
+              <label class="radio">
+                <input type="radio" name="subject" value="design" required />
+                <span class="radio__box">طراحی</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="subject" value="consult" required />
+                <span class="radio__box">مشاوره</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="subject" value="build" required />
+                <span class="radio__box">ساخت</span>
+              </label>
+            </div>
+            <span class="field__error" data-error-for="subject"></span>
+          </fieldset>
+
+          <button type="submit" class="btn btn--primary btn--block ripple">ارسال درخواست همکاری</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============== UPLOAD FORM ============== -->
+    <section class="upload section" id="upload">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-head__eyebrow">ارسال فایل پروژه</span>
+          <h2 class="section-head__title">ثبت کیس دندانی</h2>
+          <p class="section-head__desc">
+            فرم زیر را با اطلاعات لابراتوار و بیمار تکمیل کرده و فایل اسکن کیس را ارسال
+            کنید. فرمت‌های مجاز: <strong>STL، PLY، OBJ و 3MF</strong>.
+          </p>
+        </header>
+
+        <form class="form form--upload reveal" id="uploadForm" novalidate>
+          <!-- Lab info -->
+          <div class="form__group">
+            <h3 class="form__group-title">اطلاعات لابراتوار</h3>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="uf-lab">نام لابراتوار</label>
+                <input class="field__input" type="text" id="uf-lab" name="labName" placeholder="نام لابراتوار" required minlength="2" />
+                <span class="field__error" data-error-for="uf-lab"></span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="uf-postal">کد پستی</label>
+                <input class="field__input" type="text" id="uf-postal" name="postal" inputmode="numeric" placeholder="۱۰ رقمی" required pattern="^\d{10}$" dir="ltr" />
+                <span class="field__error" data-error-for="uf-postal"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Patient info -->
+          <div class="form__group">
+            <h3 class="form__group-title">اطلاعات بیمار</h3>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="uf-pname">نام بیمار</label>
+                <input class="field__input" type="text" id="uf-pname" name="patientName" placeholder="نام بیمار" required minlength="2" />
+                <span class="field__error" data-error-for="uf-pname"></span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="uf-age">سن بیمار</label>
+                <input class="field__input" type="number" id="uf-age" name="age" inputmode="numeric" min="1" max="120" placeholder="مثلاً: ۳۵" required />
+                <span class="field__error" data-error-for="uf-age"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Color + scan -->
+          <div class="form__group">
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="uf-color">رنگ کار (Color Matching)</label>
+                <div class="select-wrap">
+                  <select class="field__input field__select" id="uf-color" name="color" required>
+                    <option value="" disabled selected>انتخاب رنگ...</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="A3">A3</option>
+                    <option value="A3.5">A3.5</option>
+                    <option value="A4">A4</option>
+                    <option value="B1">B1</option>
+                    <option value="B2">B2</option>
+                    <option value="C1">C1</option>
+                    <option value="C2">C2</option>
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                  </select>
+                </div>
+                <span class="field__error" data-error-for="uf-color"></span>
+              </div>
+
+              <fieldset class="field field--radio">
+                <legend class="field__label">نوع اسکن <span class="field__req">*</span></legend>
+                <div class="radio-group radio-group--col">
+                  <label class="radio">
+                    <input type="radio" name="scanType" value="desktop" required />
+                    <span class="radio__box">اسکنر لابراتواری (Desktop Scanner)</span>
+                  </label>
+                  <label class="radio">
+                    <input type="radio" name="scanType" value="intraoral" required />
+                    <span class="radio__box">اورال اسکن (Oral Scanner / Intraoral)</span>
+                  </label>
+                </div>
+                <span class="field__error" data-error-for="scanType"></span>
+              </fieldset>
+            </div>
+          </div>
+
+          <!-- File upload -->
+          <div class="form__group">
+            <label class="field__label" for="uf-file">فایل پروژه (STL / PLY / OBJ / 3MF)</label>
+            <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="انتخاب فایل پروژه">
+              <input class="dropzone__input" type="file" id="uf-file" name="file" accept=".stl,.ply,.obj,.3mf" required hidden />
+              <div class="dropzone__content">
+                <span class="dropzone__icon" aria-hidden="true">⬆</span>
+                <span class="dropzone__text">فایل را اینجا بکشید و رها کنید یا کلیک کنید</span>
+                <span class="dropzone__hint">حداکثر حجم پیشنهادی: ۵۰ مگابایت</span>
+              </div>
+              <div class="dropzone__file" id="dropzoneFile" hidden>
+                <span class="dropzone__file-name" id="dropzoneFileName"></span>
+                <button type="button" class="dropzone__file-remove" id="dropzoneRemove" aria-label="حذف فایل">×</button>
+              </div>
+            </div>
+            <span class="field__error" data-error-for="uf-file"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block ripple">ثبت نهایی پروژه</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="logo.svg" alt="لوگوی TDC" class="footer__logo" width="110" height="58" />
+        <p class="footer__tagline">طراحی دیجیتال دندال · از ایده تا رستوریشن</p>
+      </div>
+
+      <div class="footer__contact">
+        <a class="footer__phone" href="tel:+982112345678" dir="ltr">
+          <svg class="footer__phone-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+            <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24a11.36 11.36 0 0 0 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1a11.36 11.36 0 0 0 .57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/>
+          </svg>
+          <span>021-12345678</span>
+        </a>
+
+        <div class="footer__socials" aria-label="شبکه‌های اجتماعی">
+          <a class="social" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.8 3.8 0 0 1-1.38-.9a3.8 3.8 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23c.22-.56.48-.96.9-1.38c.42-.42.82-.68 1.38-.9c.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.8c-3.15 0-3.5.01-4.74.07c-1.14.05-1.76.24-2.17.4c-.55.22-.94.47-1.35.88c-.41.41-.66.8-.88 1.35c-.16.41-.35 1.03-.4 2.17c-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.05 1.14.24 1.76.4 2.17c.22.55.47.94.88 1.35c.41.41.8.66 1.35.88c.41.16 1.03.35 2.17.4c1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4c.55-.22.94-.47 1.35-.88c.41-.41.66-.8.88-1.35c.16-.41.35-1.03.4-2.17c.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 0 0-.88-1.35a3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.17-.4c-1.24-.06-1.59-.07-4.74-.07Zm0 3.06a4.98 4.98 0 1 1 0 9.96a4.98 4.98 0 0 1 0-9.96Zm0 1.8a3.18 3.18 0 1 0 0 6.36a3.18 3.18 0 0 0 0-6.36Zm6.34-3.06a1.16 1.16 0 1 1-2.32 0a1.16 1.16 0 0 1 2.32 0Z"/></svg>
+          </a>
+          <a class="social" href="https://wa.me/989121234567" target="_blank" rel="noopener noreferrer" aria-label="واتساپ">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.91-7.02ZM12.04 20.15a8.2 8.2 0 0 1-4.19-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24a8.2 8.2 0 0 1 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.13c-.16.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.5c.11-.11.25-.29.37-.43c.12-.14.16-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.12-.56-1.34-.76-1.84c-.2-.48-.4-.41-.56-.42l-.48-.01c-.17 0-.43.06-.66.31c-.23.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.68-1.18c.21-.58.21-1.07.14-1.18c-.06-.1-.22-.16-.47-.28Z"/></svg>
+          </a>
+          <a class="social" href="https://t.me" target="_blank" rel="noopener noreferrer" aria-label="تلگرام">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M21.94 4.6L18.9 19.2c-.23 1.02-.84 1.27-1.7.79l-4.7-3.47l-2.27 2.18c-.25.25-.46.47-.94.47l.33-4.78l8.7-7.86c.38-.34-.08-.53-.59-.19L6.78 13.2l-4.64-1.45c-1.01-.31-1.03-1.01.21-1.5l18.14-6.99c.84-.31 1.58.19 1.45 1.34Z"/></svg>
+          </a>
+          <a class="social" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="لینکدین">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04c-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14a2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">© ۱۴۰۳ TIMAR DENTAL CENTER — تمامی حقوق محفوظ است.</p>
+        <span class="footer__credit">طراحی‌شده با عشق برای دیجیتال دنتال</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== 3D VIEWER MODAL ============== -->
+  <div class="modal" id="viewerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel">
+      <header class="modal__head">
+        <div>
+          <span class="modal__eyebrow" id="viewerEyebrow">نمونه‌کار ۳بعدی</span>
+          <h3 class="modal__title" id="viewerTitle">—</h3>
+        </div>
+        <button class="modal__close" id="modalClose" aria-label="بستن نمایشگر" data-close>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </header>
+      <div class="modal__stage" id="viewerStage">
+        <canvas id="viewerCanvas" class="modal__canvas"></canvas>
+        <div class="modal__loader" id="viewerLoader">
+          <span class="spinner"></span>
+          <span>در حال بارگذاری مدل سه‌بعدی…</span>
+        </div>
+      </div>
+      <footer class="modal__foot">
+        <div class="modal__controls">
+          <span class="modal__ctrl"><b>کشیدن</b> چرخش</span>
+          <span class="modal__ctrl"><b>اسکرول</b> زوم</span>
+          <span class="modal__ctrl"><b>کلیک راست</b> جابجایی</span>
+        </div>
+        <div class="modal__actions">
+          <button class="btn btn--ghost btn--sm" id="viewerReset" type="button">ریست نمای دوربین</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- App script (ES module) -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
